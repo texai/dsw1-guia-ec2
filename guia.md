@@ -1,0 +1,44 @@
+# Guia EC2
+
+- Creamos un nuevo repositorio en Github https://github.com/new
+  - Público
+  - Add a README file
+- Abrimos ese repo usando CodeSpaces
+  - Click botón verde "Code"
+  - Click pestaña CodeSpaces
+  - "Open in CodeSpaces"
+- Creamos un nuevo proyecto Java desde https://start.spring.io/
+  - Project: maven
+  - Dependencies: "Spring Web"
+  - Clic en generar para descargar el archivo.zip
+- Integramos los archivos de nuestro proyecto java generado en nuesto repo recien creado
+  - Arrastramos los archivos de una ventana a CodeSpaces
+- Agregamos Extensión de java
+  - Buscar "java" en el panel de extensiones
+  - Instalamos: "Extension Pack for Java"
+- Ejecutamos nuestro proyecto java para probar que todo funcione ok
+  - En el panel "explorer" de CodeSpaces
+  - En la sección JAVA PROJECTS
+  - Importar el proyecto 
+  - Click derecho en el proyecto
+  - Run
+- Usamos el repo de referencia para implementar el examen: https://github.com/texai/idat-dsw1-accessing-data-mysql
+  - Implementamos un controlador sin DB
+  - Añadimos dependencias al pom.xml
+  - Añadimos Curso.java
+  - Añadimos CursoRepository.java
+  - Implementamos un controlador con DB
+- Creamos nuestra BD en render y configuramos nuestro archivo application.properties
+- Añadir Dockerfile
+  - El comando EXPOSE debe apuntar al mismo puerto donde corre tu app
+  - Ver server.port en el archivo application.properties
+  - El valor por defecto es 8080
+- Añadir archivo reqs.http
+- Dejar de ignorar directorio target, archivo .gitignore
+- mvnw clean package
+  - Si sale error de permiso denegado (Permission denied):
+    - Ejecutar comando para dar permisos de ejecución: chmod +x mvnw
+- Nos aseguramos de que exista el archivo .jar dentro de target
+- commitear todo y sincronozar todo
+- Crear app en render
+- Realizar las pruebas
