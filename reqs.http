@@ -1,4 +1,4 @@
-@subdominio = sub-dominio-render
+@subdominio = guia-ec2
 
 ##############################
 # Requests SIN base de datos #
